@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <footer className="relative bg-black/20 backdrop-blur-sm border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -128,16 +128,16 @@ const Footer = () => {
               events, and industry insights.
             </p>
             <div className="space-y-4">
-              <div className="flex">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-l-lg text-white placeholder-blue-200 focus:outline-none focus:border-blue-400"
+                  className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-white placeholder-blue-200 focus:outline-none focus:border-blue-400"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 rounded-r-lg text-white font-medium hover:shadow-lg transition-all"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 rounded-lg sm:rounded-l-none sm:rounded-r-lg text-white font-medium hover:shadow-lg transition-all"
                 >
                   Subscribe
                 </motion.button>

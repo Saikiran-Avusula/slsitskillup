@@ -82,7 +82,7 @@ const About = () => {
               initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.3 }}
-              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}
+              className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
             >
               {/* Chapter Content */}
               <div className="flex-1 space-y-6">
@@ -138,7 +138,7 @@ const About = () => {
             <p className="text-xl text-slate-300">Milestones that shaped our story</p>
           </div>
 
-          <div className="relative">
+          <div className="relative hidden md:block">
             <div className="timeline-line h-full" />
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
@@ -147,9 +147,9 @@ const About = () => {
                   initial={{ opacity: 0, y: 50 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 1.2 + index * 0.2 }}
-                  className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
+                  className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'md:justify-end'}`}
                 >
-                  <div className={`w-full max-w-md ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
+                  <div className="w-full max-w-md text-left">
                     <div className="story-card glass-effect rounded-xl p-6 professional-hover">
                       <div className="flex items-center space-x-4 mb-3">
                         <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">

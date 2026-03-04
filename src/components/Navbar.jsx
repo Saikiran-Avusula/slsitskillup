@@ -41,7 +41,7 @@ const Navbar = () => {
               <img 
                 src="https://res.cloudinary.com/dnz1dmnmb/image/upload/v1755791676/Untitled_design_1_mwus8h.png"
                 alt="SLSIT Skillup Logo"
-                className="w-[20vh] h-[20vh] object-contain"
+                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain"
               />
             </motion.div>
           </Link>
@@ -64,14 +64,16 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden md:block">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-professional text-sm"
-            >
-              Start Your Journey
-            </motion.button>
+          <div className="hidden lg:block">
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-lg hover:shadow-xl transition-all"
+              >
+                Start Your Journey
+              </motion.button>
+            </Link>
           </div>
 
           <div className="md:hidden">
@@ -108,9 +110,11 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="pt-4">
-              <button className="w-full btn-professional text-sm">
-                Start Your Journey
-              </button>
+              <Link to="/contact" className="block">
+                <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg">
+                  Start Your Journey
+                </button>
+              </Link>
             </div>
           </div>
         </motion.div>

@@ -36,7 +36,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
-            className="text-5xl md:text-7xl font-bold text-slate-100 leading-tight mb-8"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold text-slate-100 leading-tight mb-8"
           >
             Every Great Career
             <span className="block text-gradient animate-story-text">Starts with a Story</span>
@@ -46,7 +46,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 1 }}
-            className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed mb-12"
+            className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed mb-12"
           >
             What if we told you that in just 6 months, you could transform from a curious learner 
             into a skilled professional? This is not just education—this is your transformation story.
@@ -57,7 +57,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-12"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto mb-12"
           >
             {[
               { icon: Users, number: "10,000+", label: "Success Stories", color: "text-blue-400" },
@@ -71,8 +71,8 @@ const Hero = () => {
                 transition={{ delay: 1 + index * 0.1, type: "spring" }}
                 className="text-center story-card glass-effect rounded-xl p-4"
               >
-                <stat.icon className={`h-8 w-8 ${stat.color} mx-auto mb-2`} />
-                <div className="text-2xl md:text-3xl font-bold text-slate-100">{stat.number}</div>
+                <stat.icon className={`h-6 w-6 sm:h-8 sm:w-8 ${stat.color} mx-auto mb-2`} />
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-100">{stat.number}</div>
                 <div className="text-slate-300 text-sm">{stat.label}</div>
               </motion.div>
             ))}

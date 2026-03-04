@@ -153,21 +153,21 @@ const Courses = () => {
                   </div>
 
                   {/* Price and CTA */}
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                     <div>
                       <span className="text-2xl font-bold text-white">{course.price}</span>
                       <span className="text-blue-200 text-sm ml-1">/ course</span>
                     </div>
-                    <div className="flex space-x-2">
+                    <div className="flex space-x-2 w-full sm:w-auto">
                       <button
                         onClick={() => handleEnrollClick(course)}
-                        className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full font-medium text-sm hover:shadow-xl transition-all transform hover:scale-105"
+                        className="flex-1 sm:flex-none bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full font-medium text-sm hover:shadow-xl transition-all transform hover:scale-105"
                       >
                         Enroll
                       </button>
                       <Link
                         to={`/course/${course.id}`}
-                        className={`bg-gradient-to-r ${course.gradient} text-white px-4 py-2 rounded-full font-medium text-sm flex items-center space-x-1 hover:shadow-xl transition-all transform hover:scale-105`}
+                        className={`flex-1 sm:flex-none bg-gradient-to-r ${course.gradient} text-white px-4 py-2 rounded-full font-medium text-sm flex items-center justify-center space-x-1 hover:shadow-xl transition-all transform hover:scale-105`}
                       >
                         <span>Details</span>
                         <ArrowRight className="h-3 w-3" />
